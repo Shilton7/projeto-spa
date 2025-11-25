@@ -1,4 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using servico_aula_api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar o Entity Framework Mysql
+var connectionStringMysql = builder
+                            .Configuration
+                            .GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseMySql(connectionStringMysql, 
+                ServerVersion.AutoDetect(connectionStringMysql)));
 
 // Add services to the container.
 
