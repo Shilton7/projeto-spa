@@ -1,0 +1,42 @@
+## Ignore .NET build
+bin/
+obj/
+log/
+logs/
+*.dll
+*.pdb
+*.cache
+*.json
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## VSCode
+.vscode/
+
+## Rider
+.idea/
+
+## EF Core
+Migrations/*Snapshot.cs
+Migrations/*Designer.cs
+
+## ASP.NET temp
+AppData/
+
+## Certificados e configs
+*.pfx
+*.p12
+*.key
+*.cer
+appsettings.Development.json
+appsettings.Local.json
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Node
+node_modules/
